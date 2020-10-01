@@ -47,8 +47,9 @@ def find_group(groups_list, key_list):
             lesson_type = key_list[i+1]  # Получить вид занятий
             teachers_names = key_list[i+2]  # Получеть фио перподов
             audience_number = key_list[i+3]  # Получить номер аудитории
-
-            group_list = groups_list[[lessons, lesson_type, teachers_names, audience_number]]  # УСЛОВИЕ Взять расписание группы
+            link = key_list[i+4]
+            
+            group_list = groups_list[[lessons, lesson_type, teachers_names, audience_number, link]]  # УСЛОВИЕ Взять расписание группы
 
             group_list = group_list.drop(group_list.index[[0, 1]])# ДРОПНУТЬ МУСОР
 
